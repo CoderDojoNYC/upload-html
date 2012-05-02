@@ -5,11 +5,13 @@
   <%= @webpage.pagename %>
 </p>
 
+<%= link_to 'Edit', edit_webpage_path(@webpage) %> |
+<%= link_to 'Back', webpages_path %>
+<p>The HTML You Added Creates The Following Page:</p>
+
+<br />
 <p>
-  <b>Html:</b>
   <%= raw @webpage.html %>
 </p>
 
 
-<%= link_to 'Edit', edit_webpage_path(@webpage) %> |
-<%= link_to 'Back', webpages_path %>
