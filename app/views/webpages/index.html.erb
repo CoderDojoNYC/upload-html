@@ -5,7 +5,6 @@
     <th>Pagename</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @webpages.each do |webpage| %>
@@ -13,7 +12,6 @@
     <td><%= webpage.pagename %></td>
     <td><%= link_to 'Show', webpage %></td>
     <td><%= link_to 'Edit', edit_webpage_path(webpage) %></td>
-    <td><%= link_to 'Destroy', webpage, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
