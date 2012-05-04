@@ -14,6 +14,7 @@ class WebpagesController < ApplicationController
   # GET /webpages/1.json
   def show
     @webpage = Webpage.find(params[:id])
+    render :layout => false and return
 
     respond_to do |format|
       format.html # show.html.erb
