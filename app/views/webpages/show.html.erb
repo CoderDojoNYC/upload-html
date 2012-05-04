@@ -1,3 +1,5 @@
+<!--This is part of CoderDojo Code -->
+<!--===========================================-->
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -8,10 +10,9 @@
 <%= link_to 'Edit', edit_webpage_path(@webpage) %> |
 <%= link_to 'Back', webpages_path %>
 <p>The HTML You Added Creates The Following Page:</p>
+<!--===========================================-->
+<!--Everything below this part is your own HTML -->
 
-<br />
-<p>
-  <%= raw @webpage.html %>
-</p>
+<%= raw @webpage.html %>
 
 
