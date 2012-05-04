@@ -1,26 +1,24 @@
-<%= form_for(@webpage) do |f| %>
-  <% if @webpage.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@webpage.errors.count, "error") %> prohibited this webpage from being saved:</h2>
+<%= form_for @webpage, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Webpage</legend>
 
-      <ul>
-      <% @webpage.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <div class="control-group">
+      <%= f.label :pagename, :class => 'control-label' %>
+      <div class="controls">
+	<%= f.text_field :pagename, :class => 'text_field span6' %>
+      </div>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :pagename %><br />
-    <%= f.text_field :pagename, :size => 80 %>
-  </div>
-  <br />
-  <div class="field">
-    <%= f.label "Insert Your HTML Below" %><br />
-    <%= f.text_area :html, :cols => 80, :rows => 14 %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="control-group">
+      <%= f.label :html, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_area :html, :class => 'text_area span6' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', webpages_path, :class => 'btn' %>
+    </div>
+  </fieldset>
 <% end %>
