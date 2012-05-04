@@ -4,14 +4,12 @@
   <tr>
     <th>Pagename</th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @webpages.each do |webpage| %>
   <tr>
     <td><%= webpage.pagename %></td>
     <td><%= link_to 'Show', webpage %></td>
-    <td><%= link_to 'Edit', edit_webpage_path(webpage) %></td>
   </tr>
 <% end %>
 </table>
