@@ -10,6 +10,10 @@ class WebpagesController < ApplicationController
     end
   end
 
+  def admin
+    @webpages = Webpage.all
+  end
+
   # GET /webpages/1
   # GET /webpages/1.json
   def show

@@ -3,6 +3,8 @@ HtmlUpload::Application.routes.draw do
 
   root :to => 'webpages#index'
 
+  match "/iamadmin" => "webpages#admin"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

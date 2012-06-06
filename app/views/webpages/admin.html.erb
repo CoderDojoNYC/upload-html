@@ -1,0 +1,22 @@
+<h1>Webpages</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Pagename</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @webpages.each do |webpage| %>
+      <tr>
+        <td><%= link_to webpage.pagename, webpage_path(webpage) %></td>
+        <td>
+          <%= link_to 'Edit', edit_webpage_path(webpage), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', webpage, :confirm => 'Are you sure?', :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_webpage_path, :class => 'btn btn-primary' %>
